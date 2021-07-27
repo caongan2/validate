@@ -24,6 +24,7 @@
                     <th>Username</th>
                     <th>Email</th>
                     <th>Number Phone</th>
+                    <th>Hiếu</th>
                     <th></th>
                 </tr>
                 </thead>
@@ -34,6 +35,7 @@
                         <td>{{$user->username}}</td>
                         <td>{{$user->email}}</td>
                         <td>{{$user->phone}}</td>
+                        <td><img src="" alt="error"></td>
                         <td>
                             <a href="{{route('user.profile', $user->id)}}"><i class="fa fa-user fa-2x"></i></a>
                             <a href="{{route('user.update', $user->id)}}"><i class="far fa-edit fa-2x"></i></a>

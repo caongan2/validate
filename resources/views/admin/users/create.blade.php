@@ -12,7 +12,7 @@
                 </button>
             </div>
         </div>
-        <form action="" method="post">
+        <form action="" method="post" enctype="multipart/form-data">
             @csrf
             <div class="card-body">
                 <div class="form-group">
@@ -51,6 +51,11 @@
                     @error('password')
                     <p class="text-danger">{{$message}}</p>
                     @enderror
+                </div>
+                <div class="form-group">
+                    <label for="inputDescription">Number phone</label>
+                    <input type="file" value="}" name="image" id="image"
+                           class="form-control">
                 </div>
                 <button type="submit" class="btn btn-success">Accept</button>
                 <a href="" class="btn btn-secondary">Cancel</a>

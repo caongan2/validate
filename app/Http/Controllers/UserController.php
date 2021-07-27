@@ -43,6 +43,9 @@ class UserController extends Controller
             $user->password = $request->input('password');
             $user->email = $request->input('email');
             $user->phone = $request->input('phone');
+            $user->image = $request->input('image');
+            $path = $request->file('image');
+            $path->move('img', 'image.jpg');
             $user->save();
             toastr()->success('Thêm người dùng thành công', 'Success');
             return redirect()->route('user.list');
